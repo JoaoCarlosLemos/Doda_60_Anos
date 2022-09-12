@@ -1,0 +1,215 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    background-image: url("../imagens/rose-petals.svg");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.cabecario{
+    width: 100%;
+    height: 107px;
+    /*background-color: brown;*/
+    display: flex;
+}
+
+.faixa-superior{
+    width: calc(50% - 80px);
+    height: 5px;
+    background: rgb(75,73,73);
+    background: linear-gradient(90deg, rgba(75,73,73,1) 0%, rgba(40,40,40,1) 100%);
+    position: absolute;
+    top:44px;
+}
+
+.faixa-central{
+    width: 100%;
+    height: 40px;
+    background: rgb(40,40,40);
+    background: linear-gradient(90deg, rgba(40,40,40,1) 0%, rgba(75,73,73,1) 50%, rgba(40,40,40,1) 100%);
+    position: absolute;
+    top:52px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-logo-60-anos{
+    width: 180px;
+    height: 107px;
+    /*background-color: rgba(0, 255, 255, 0.486);*/
+    position: absolute;
+    top:-53px;
+    z-index: 0;
+}
+
+#logo-6{
+    font-family:Monotype Corsiva, Times, Serif;
+    font-size: 170px;
+    color:#c29969;
+    position: absolute;
+    top:-26px;
+    left: -15px;
+    z-index: -1;
+}
+
+#logo-0{
+    font-family:Monotype Corsiva, Times, Serif;
+    font-size: 170px;
+    color:#c29969;
+    position: absolute;
+    top: -30px;
+    left: 60px;
+    z-index: -1;
+}
+
+.logo-texto{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    z-index: 2;
+    position: absolute;
+}
+
+#logo-year{
+    top:50px;
+    left:120px;
+    font-size: 29px;
+    background-color:#4b4949;
+    border-top: solid 3px rgb(255, 255, 255);
+    line-height: 30px;
+}
+
+#logo-anniversary{
+    top:79px;
+    left:120px;
+    background-color: #4b4949;
+    line-height: 14px;
+    border-bottom: solid 3px rgb(255, 255, 255);
+    font-size: 14px;
+}
+
+.container-faixa-inferior{
+    width: 100%;
+    height: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.faixa-inferior{
+    width: calc(50% - 60px);
+    height: 5px;
+    background: rgb(40,40,40);
+    background: linear-gradient(90deg, rgba(40,40,40,1) 0%, rgba(75,73,73,1) 100%);
+    position: absolute;
+    top:94px;
+}
+
+h1{
+    font-family: 'Smooch', cursive;
+    color:#c29969;
+    text-align: center;
+    font-size: 110px;
+    font-weight: normal;
+    line-height: 120px ;
+}
+
+
+/*---------------------------------
+  ------- CONTAINER - VIDEO -------
+  ---------------------------------*/
+
+
+.container-video{
+    max-width: 1900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+    
+}
+
+.container-video .main-video video{
+    max-width: 100%;
+    max-height: 620px;
+    border-radius: 5px;
+}
+
+.container-video .main-video .title{
+    color:#333;
+    font-size: 23px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.container-video .video-list{
+    /*background: #fff; */
+    border-radius: 5px;
+    max-height: 620px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.container-video .video-list::-webkit-scrollbar{
+    width: 7px;
+}
+
+.container-video .video-list::-webkit-scrollbar-track{
+    background: #ccc;
+    border-radius: 50px;
+}
+
+.container-video .video-list::-webkit-scrollbar-thumb{
+    background: #666;
+    border-radius: 50px;
+}
+
+.container-video .video-list .vid video{
+    width: 20%;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+.container-video .video-list .vid{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background: #f7f7f7;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid rgba(0,0,0,.1);
+    cursor: pointer;
+}
+
+.container-video .video-list .vid:hover{
+    background-color: #eee;
+}
+
+.container-video .video-list .vid.active{
+    background-color: #c29969;
+}
+
+.container-video .video-list .vid.active .title{
+    color:#fff;
+}
+
+h3{
+    font-size: 12px;
+}
+
+@media(max-width:768px){
+    .container-video{
+        grid-template-columns: 1fr;
+    }
+}
